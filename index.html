@@ -71,6 +71,13 @@
       </div>
     </div>
   </div>
+  <div>
+    <a target="_blank" class="hashtag hashtag-js" href="https://tuantranict.blogspot.com/search/label/JavaScript">#javascript</a>
+    <a target="_blank" class="hashtag hashtag-react" href="https://tuantranict.blogspot.com/search/label/reactjs">#react</a>
+    <a target="_blank" class="hashtag hashtag-python" href="https://tuantranict.blogspot.com/search/label/python">#python</a>
+    <a target="_blank" class="hashtag hashtag-html" href="https://tuantranict.blogspot.com/search/label/html">#html</a>
+    <a target="_blank" class="hashtag hashtag-css" href="https://tuantranict.blogspot.com/search/label/css">#css</a>
+  </div>
   <svg hidden="hidden">
     <defs>
 
@@ -143,6 +150,32 @@
     function _outSocial(x) {
       document.getElementById("profile_name").style.color = "#6944ff";
     }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      animateDiv('.hashtag-js');
+      animateDiv('.hashtag-react');
+      animateDiv('.hashtag-python');
+      animateDiv('.hashtag-html');
+      animateDiv('.hashtag-css');
+    });
+
+    function makeNewPosition() {
+      var h = $(window).height() - 50;
+      var w = $(window).width() - 50;
+      var nh = Math.floor(Math.random() * h);
+      var nw = Math.floor(Math.random() * w);
+      return [nh, nw];
+    }
+
+    function animateDiv(myclass) {
+      var newq = makeNewPosition();
+      $(myclass).animate({ top: newq[0], left: newq[1] }, 8000, function () {
+        animateDiv(myclass);
+      });
+    };
   </script>
 </body>
 

@@ -35,6 +35,35 @@ a, a:hover {
   background-image: linear-gradient(-20deg, #ff2846 0%, #6944ff 100%);
   box-shadow: 0 2px 20px 0 rgba(0,0,0,0.05);
 }
+.hashtag {
+  position:fixed;
+  padding: 6px 22px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+.hashtag:hover {
+  text-decoration: underline;
+}
+.hashtag-js {
+  color: #000000;
+  background: #ecdb54;
+}
+.hashtag-react {
+  background: #282c34;
+  color: #61dafb;
+}
+.hashtag-python {
+background: #366e9d;
+color: #f3cc41;
+}
+.hashtag-html {
+  background: #ff8000;
+  color: #fff;
+}
+.hashtag-css {
+  background: #bc70a4;
+  color: #fff;
+}
 @media screen and (max-width: 768px) {
   .wrapper {
     height: auto;
