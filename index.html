@@ -20,7 +20,10 @@
       </div>
 
       <div class="profile-card__cnt js-profile-cnt">
-        <div id="profile_name" class="profile-card__name">TRAN VAN TUAN (TuanTVK)</div>
+        <h2 id="profile_name" class="profile-card__name">
+          <a>TRAN VAN TUAN (TuanTVK)
+          </a>
+        </h2>
         <div class="profile-card__txt">Front-end Developer from <strong>Vietnam</strong></div>
         <div class="profile-card-loc">
           <span class="profile-card-loc__icon">
@@ -35,8 +38,7 @@
         </div>
 
         <div class="profile-card-social">
-          <a onmouseover="_hoverSocial(this, '#0078d7')" onmouseout="_outSocial(this)"
-            href="https://www.facebook.com/tuantvk" class="profile-card-social__item facebook" target="_blank">
+          <a href="https://www.facebook.com/tuantvk" class="profile-card-social__item facebook" target="_blank">
             <span class="icon-font">
               <svg class="icon">
                 <use xlink:href="#icon-facebook"></use>
@@ -44,24 +46,21 @@
             </span>
           </a>
 
-          <a onmouseover="_hoverSocial(this, '#1da1f2')" onmouseout="_outSocial(this)"
-            href="https://twitter.com/TuanTVK" class="profile-card-social__item twitter" target="_blank">
+          <a href="https://twitter.com/TuanTVK" class="profile-card-social__item twitter" target="_blank">
             <span class="icon-font">
               <svg class="icon">
                 <use xlink:href="#icon-twitter"></use>
               </svg>
             </span>
           </a>
-          <a onmouseover="_hoverSocial(this, '#333')" onmouseout="_outSocial(this)" href="https://github.com/tuantvk"
-            class="profile-card-social__item github" target="_blank">
+          <a href="https://github.com/tuantvk" class="profile-card-social__item github" target="_blank">
             <span class="icon-font">
               <svg class="icon">
                 <use xlink:href="#icon-github"></use>
               </svg>
             </span>
           </a>
-          <a onmouseover="_hoverSocial(this, '#d5135a')" onmouseout="_outSocial(this)"
-            href="https://tuantranict.blogspot.com" class="profile-card-social__item link" target="_blank">
+          <a href="https://tuantranict.blogspot.com" class="profile-card-social__item link" target="_blank">
             <span class="icon-font">
               <svg class="icon">
                 <use xlink:href="#icon-link"></use>
@@ -153,15 +152,6 @@
       </symbol>
     </defs>
   </svg>
-  <script>
-    function _hoverSocial(x, cl) {
-      document.getElementById("profile_name").style.color = cl;
-    }
-
-    function _outSocial(x) {
-      document.getElementById("profile_name").style.color = "#6944ff";
-    }
-  </script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>
