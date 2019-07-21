@@ -16,6 +16,22 @@ body {
 a, a:hover {
   text-decoration: none;
 }
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+  animation-duration: 1s;
+}
 .icon {
   display: inline-block;
   width: 1em;
@@ -34,6 +50,56 @@ a, a:hover {
   display: flex;
   background-image: linear-gradient(-20deg, #ff2846 0%, #6944ff 100%);
   box-shadow: 0 2px 20px 0 rgba(0,0,0,0.05);
+}
+.hashtag {
+  position:fixed;
+  padding: 6px 22px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+.hashtag:hover {
+  text-decoration: underline;
+}
+.hashtag-js {
+  color: #000000;
+  background: #ecdb54;
+}
+.hashtag-react {
+  background: #282c34;
+  color: #61dafb;
+}
+.hashtag-python {
+background: #366e9d;
+color: #f3cc41;
+}
+.hashtag-html {
+  background: #ff8000;
+  color: #fff;
+}
+.hashtag-css {
+  background: #bc70a4;
+  color: #fff;
+}
+.about-me {
+  background: #fff;
+  color: #000000;
+  width: 350px;
+  padding: 10px 30px;
+  border-radius: 4px;
+  position: absolute;
+  top: 2%;
+  user-select: none;
+  box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
+}
+.about-me h2 {
+  margin: 10px 0;
+  padding-left: 15px;
+  font-size: 40px;
+  border-left: 3px solid #27aa80;
+}
+.about-content {
+  margin-top: 15px;
+  padding-left: 20px;
 }
 @media screen and (max-width: 768px) {
   .wrapper {
@@ -136,6 +202,14 @@ a, a:hover {
   font-size: 21px;
   flex-shrink: 0;
   transition: all 0.3s;
+  -webkit-transition: -webkit-transform .4s ease-in-out;
+  -ms-transition: -ms-transform .4s ease-in-out;
+  transition: transform .4s ease-in-out; 
+}
+.profile-card-social__item:hover {
+  -ms-transform: rotate(25deg); /* IE 9 */
+  -webkit-transform: rotate(25deg); /* Safari 3-8 */
+  transform: rotate(25deg);
 }
 @media screen and (max-width: 768px) {
   .profile-card-social__item {
