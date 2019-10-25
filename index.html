@@ -9,6 +9,7 @@
   <meta name="robots" content="index, follow">
   <link rel="TuanTVK icon" type="image/png" href="assets/img/favicon.png" />
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/common.css">
   <title>TuanTVK Blog</title>
 </head>
 
@@ -16,12 +17,16 @@
   <div class="wrapper">
     <div class="profile-card js-profile-card">
       <div class="profile-card__img">
-        <img src="assets/img/avatar.jpg" alt="tuantvk">
+        <!-- <img src="assets/img/avatar.jpg" alt="tuantvk"> -->
       </div>
 
       <div class="profile-card__cnt js-profile-cnt">
         <h2 id="profile_name" class="profile-card__name">
-          <a>TRAN VAN TUAN (TuanTVK)
+          <a aria-label="link-3" target="_blank" rel="noopener" draggable="false" class="link w-inline-block">
+            <h1 class="h1">TRAN VAN TUAN (TuanTVK)</h1>
+            <img class="content__img"
+              src="https://raw.githubusercontent.com/tuantvk/tuantvk.github.io/master/assets/img/avatar.jpg"
+              alt="img1" />
           </a>
         </h2>
         <div class="profile-card__txt">Front-end Developer from <strong>Vietnam</strong></div>
@@ -177,6 +182,25 @@
         animateDiv(myclass);
       });
     };
+  </script>
+  <script src="js/three.min.js"></script>
+  <script src="js/TweenLite.min.js"></script>
+  <script src="js/Math.js"></script>
+  <script src="js/EffectShell.js"></script>
+  <script src="js/StretchEffect.js"></script>
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+  <script>
+    const container = document.body
+    const itemsWrapper = document.querySelector('.js-profile-cnt')
+    const preloadImages = () => {
+      return new Promise((resolve, reject) => {
+        imagesLoaded(document.querySelectorAll('img'), resolve);
+      });
+    };
+    preloadImages().then(() => {
+      document.body.classList.remove('loading');
+      const effect = new StretchEffect(container, itemsWrapper)
+    });
   </script>
 </body>
 
